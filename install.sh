@@ -17,7 +17,7 @@ echo "========================================================"
 # 1. Check system dependencies (GTK3, PyGObject, Cairo, DBus, psutil, X11 tools)
 echo "📦 Checking system dependencies..."
 MISSING_PKGS=()
-for pkg in python3-gi python3-gi-cairo gir1.2-gtk-3.0 python3-psutil python3-dbus x11-xserver-utils; do
+for pkg in python3-gi python3-gi-cairo python3-cairo gir1.2-gtk-3.0 python3-psutil python3-dbus x11-xserver-utils; do
     if ! dpkg -s "$pkg" >/dev/null 2>&1; then
         MISSING_PKGS+=("$pkg")
     fi
